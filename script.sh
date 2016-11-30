@@ -1,7 +1,7 @@
 #!/bin/bash -ex
 
 apt update
-apt install -y --no-install-recommends ruby
+apt install -y --no-install-recommends python3-pip python3-setuptools python3-wheel
 
 apt clean
 apt autoclean
