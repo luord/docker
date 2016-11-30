@@ -3,11 +3,11 @@
 apt update
 apt install -y wget gnupg apt-transport-https
 
-wget --quiet -O - https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-echo "https://packages.cloud.google.com/apt cloud-sdk-stretch main" >> /etc/apt/sources.list
+wget --quiet -O - https://toolbelt.heroku.com/apt/release.key | apt-key add -
+echo "http://toolbelt.heroku.com/ubuntu ./" >> /etc/apt/sources.list
 
 apt update
-apt install -y --no-install-recommends google-cloud-sdk
+apt install -y --no-install-recommends heroku-toolbelt ruby
 
 apt purge -y wget gnupg apt-transport-https
 apt autoremove --purge -y
