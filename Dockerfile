@@ -1,12 +1,9 @@
-FROM debian:testing
+FROM alpine
 
-ADD script.sh /
-RUN /script.sh
-
-RUN useradd --create-home --user-group --shell /bin/false app
+RUN adduser -D app && apk --no-cache add python3
 
 USER app
-ENV LANG=C.UTF-8 HOME=/home/app
+ENV HOME=/home/app
 ENV PATH=${PATH}:${HOME}/.local/bin
 
 RUN mkdir ${HOME}/default
