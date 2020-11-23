@@ -1,6 +1,6 @@
-FROM alpine
+FROM python:slim
 
-RUN adduser -D app && apk --no-cache add python3 python3-dev musl-dev gcc cmd:pip3 && pip3 --no-cache-dir install mypy && apk del --purge python3-dev musl-dev gcc
+RUN adduser --disabled-password app && pip --no-cache-dir install poetry
 
 USER app
 ENV HOME=/home/app
