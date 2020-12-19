@@ -5,15 +5,15 @@ RUN python -m nodeenv --force -c /root/.local
 
 FROM python:slim
 
-RUN adduser --disabled-password --gecos "" app
+RUN adduser --disabled-password --gecos "" dock
 
-USER app
+USER dock
 
-ENV HOME=/home/app
+ENV HOME=/home/dock
 ENV PATH=${PATH}:${HOME}/.local/bin
 
-COPY --from=0 --chown=app:app /root/.local ${HOME}/.local
+COPY --from=0 --chown=dock:dock /root/.local ${HOME}/.local
 
-WORKDIR ${HOME}/default
+WORKDIR ${HOME}/app
 
 CMD bash

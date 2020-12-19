@@ -1,7 +1,5 @@
-A basic docker image allowing to run both `python` and `nodejs` as a regular user (not root).
+A lightweight docker image including both `python` and `nodejs`, using a non-privileged user by default.
 
-_Do not use this in production._ This image is meant to be used for prototyping only.
+Mount the local directory as volume in the `/home/dock/app` folder.
 
-**If used beyond a prototype or running in a CI, copy/clone this Dockerfile and pin the python and node versions.**
-
-Pinning the versions will ensure parity between environments, preventing errors.
+_Do not use this for serious projects._ This image is meant to be used for prototyping only.
