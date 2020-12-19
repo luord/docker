@@ -1,7 +1,7 @@
 FROM python:slim
 
 RUN  pip --no-cache-dir install --user poetry poethepoet nodeenv
-RUN python -m nodeenv --force /root/.local
+RUN python -m nodeenv --force -c /root/.local
 
 FROM python:slim
 
