@@ -1,3 +1,9 @@
-This repository is meant to contain docker resources useful to me.
+A basic docker image allowing to run both python3 and nodejs as a regular user (not root)
 
-This branch defines a python3 image.
+_DO NOT USE THIS IN PRODUCTION_
+
+This image is meant to be used for prototyping only.
+
+**If used beyond a prototype or running in a CI, it's better to copy/clone this Dockerfile and pin the python and node versions**
+
+That way potential errors by version disparity are prevented.
