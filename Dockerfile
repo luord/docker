@@ -12,6 +12,7 @@ USER dock
 ENV HOME=/home/dock
 COPY --from=0 --chown=dock:dock /root/.local ${HOME}/.local
 
+RUN mkdir ${HOME}/app
 WORKDIR ${HOME}/app
 
 ENV PATH=${PATH}:${HOME}/.local/bin
