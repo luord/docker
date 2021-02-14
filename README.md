@@ -1,5 +1,5 @@
-A lightweight docker image including both `python` and `nodejs`, using a non-privileged user by default.
+Lightweight docker image including `python`, `nodejs` and `make`. Default (`1000:1000`) user is `dock`.
 
-Mount the local directory as volume in the `/home/dock/app` folder.
+Using: `docker run -it -v /local/project/folder:/home/dock/app luord/docker`
 
-_Do not use this for serious projects._ This image is meant to be used for prototyping only.
+_Not recommended for production._ This image is meant to be used for prototyping/development/CI only.
